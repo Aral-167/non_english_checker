@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Non-English Character Checker</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>📝 Non-English Character Checker</h1>
+        <form method="post">
+            <div class="form-group">
+                <textarea name="text" placeholder="Enter your sentence or paragraph here... (Ctrl+Enter to submit quickly)">{{ text }}</textarea>
+            </div>
+            <div class="btn-container">
+                <button type="submit">Check Text</button>
+            </div>
+        </form>
+        
+        <div class="message">{{ message }}</div>
+        
+        {% if highlighted_text %}
+        <div class="results-section">
+            <h3>📍 Text with highlighted non-English characters:</h3>
+            <div class="highlighted-text">{{ highlighted_text|safe }}</div>
+        </div>
+        {% endif %}
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
