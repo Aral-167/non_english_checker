@@ -6,14 +6,14 @@
 }
 
 :root {
-    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    --accent-gradient: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
-    --success-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-    --warning-gradient: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-    --danger-gradient: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
-    --aurora-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-    --cosmic-gradient: linear-gradient(135deg, #4b6cb7 0%, #182848 50%, #667eea 100%);
+    --primary-gradient: linear-gradient(135deg, #34d399 0%, #059669 100%);
+    --secondary-gradient: linear-gradient(135deg, #6ee7b7 0%, #10b981 100%);
+    --accent-gradient: linear-gradient(135deg, #a7f3d0 0%, #d1fae5 100%);
+    --success-gradient: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    --warning-gradient: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    --danger-gradient: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    --aurora-gradient: linear-gradient(135deg, #34d399 0%, #059669 50%, #10b981 100%);
+    --cosmic-gradient: linear-gradient(135deg, #064e3b 0%, #022c22 50%, #065f46 100%);
     --glass-bg: rgba(255, 255, 255, 0.15);
     --glass-border: rgba(255, 255, 255, 0.2);
     --glass-hover: rgba(255, 255, 255, 0.25);
@@ -23,7 +23,7 @@
     --text-light: rgba(255, 255, 255, 0.95);
     --shadow-color: rgba(0, 0, 0, 0.08);
     --hover-shadow: rgba(0, 0, 0, 0.15);
-    --glow-shadow: rgba(102, 126, 234, 0.2);
+    --glow-shadow: rgba(52, 211, 153, 0.2);
     --border-radius-sm: 12px;
     --border-radius-md: 20px;
     --border-radius-lg: 30px;
@@ -67,20 +67,20 @@ body::after {
 
 body::before {
     background: 
-        radial-gradient(circle at 20% 80%, rgba(102, 126, 234, 0.08) 0%, transparent 40%),
-        radial-gradient(circle at 80% 20%, rgba(240, 147, 251, 0.06) 0%, transparent 40%),
-        radial-gradient(circle at 40% 60%, rgba(245, 87, 108, 0.05) 0%, transparent 40%),
-        radial-gradient(circle at 60% 30%, rgba(168, 237, 234, 0.04) 0%, transparent 40%);
+        radial-gradient(circle at 20% 80%, rgba(52, 211, 153, 0.08) 0%, transparent 40%),
+        radial-gradient(circle at 80% 20%, rgba(110, 231, 183, 0.06) 0%, transparent 40%),
+        radial-gradient(circle at 40% 60%, rgba(34, 197, 94, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 60% 30%, rgba(167, 243, 208, 0.04) 0%, transparent 40%);
     animation: cosmicFloat 40s infinite ease-in-out;
 }
 
 body::after {
     background: 
         conic-gradient(from 0deg at 50% 50%, 
-            rgba(102, 126, 234, 0.02) 0deg,
-            rgba(240, 147, 251, 0.03) 120deg,
-            rgba(245, 87, 108, 0.025) 240deg,
-            rgba(102, 126, 234, 0.02) 360deg);
+            rgba(52, 211, 153, 0.02) 0deg,
+            rgba(110, 231, 183, 0.03) 120deg,
+            rgba(34, 197, 94, 0.025) 240deg,
+            rgba(52, 211, 153, 0.02) 360deg);
     animation: cosmicRotate 60s infinite linear;
 }
 
@@ -88,10 +88,10 @@ body::after {
 body::after {
     background-image: 
         radial-gradient(2px 2px at 25px 35px, rgba(255, 255, 255, 0.3), transparent),
-        radial-gradient(1px 1px at 45px 75px, rgba(102, 126, 234, 0.2), transparent),
-        radial-gradient(1px 1px at 95px 45px, rgba(240, 147, 251, 0.25), transparent),
-        radial-gradient(1px 1px at 135px 85px, rgba(245, 87, 108, 0.15), transparent),
-        radial-gradient(1px 1px at 165px 35px, rgba(168, 237, 234, 0.2), transparent),
+        radial-gradient(1px 1px at 45px 75px, rgba(52, 211, 153, 0.2), transparent),
+        radial-gradient(1px 1px at 95px 45px, rgba(110, 231, 183, 0.25), transparent),
+        radial-gradient(1px 1px at 135px 85px, rgba(34, 197, 94, 0.15), transparent),
+        radial-gradient(1px 1px at 165px 35px, rgba(167, 243, 208, 0.2), transparent),
         radial-gradient(2px 2px at 195px 65px, rgba(255, 255, 255, 0.15), transparent);
     background-repeat: repeat;
     background-size: 220px 120px;
@@ -162,8 +162,8 @@ body::after {
         0 35px 90px var(--shadow-color),
         0 0 0 1px rgba(255, 255, 255, 0.25) inset,
         0 0 140px var(--glow-shadow),
-        0 0 50px rgba(102, 126, 234, 0.15),
-        0 0 25px rgba(240, 147, 251, 0.1);
+        0 0 50px rgba(52, 211, 153, 0.15),
+        0 0 25px rgba(110, 231, 183, 0.1);
     width: 100%;
     max-width: 650px;
     transition: var(--transition-elastic);
@@ -205,9 +205,9 @@ body::after {
     bottom: -20px;
     background: 
         var(--aurora-gradient),
-        radial-gradient(ellipse 150% 100% at 30% 20%, rgba(102, 126, 234, 0.08) 0%, transparent 60%),
-        radial-gradient(ellipse 120% 80% at 80% 80%, rgba(240, 147, 251, 0.06) 0%, transparent 55%),
-        radial-gradient(ellipse 100% 120% at 60% 40%, rgba(139, 92, 246, 0.05) 0%, transparent 65%);
+        radial-gradient(ellipse 150% 100% at 30% 20%, rgba(52, 211, 153, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse 120% 80% at 80% 80%, rgba(110, 231, 183, 0.06) 0%, transparent 55%),
+        radial-gradient(ellipse 100% 120% at 60% 40%, rgba(34, 197, 94, 0.05) 0%, transparent 65%);
     border-radius: calc(var(--border-radius-xl) + 20px);
     opacity: 0.3;
     pointer-events: none;
@@ -259,7 +259,7 @@ body::after {
         0 50px 120px var(--hover-shadow),
         0 0 0 2px rgba(255, 255, 255, 0.3) inset,
         0 0 200px var(--glow-shadow),
-        0 0 80px rgba(240, 147, 251, 0.2);
+        0 0 80px rgba(110, 231, 183, 0.2);
 }
 
 .container:hover::after {
@@ -291,28 +291,28 @@ h1 {
     position: relative;
     z-index: 1;
     animation: titleCosmic 4s ease-in-out infinite alternate;
-    text-shadow: 0 0 30px rgba(102, 126, 234, 0.5);
+    text-shadow: 0 0 30px rgba(52, 211, 153, 0.5);
     filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3)) contrast(1.2);
 }
 
 @keyframes titleCosmic {
     0% {
         filter: 
-            drop-shadow(0 0 20px rgba(102, 126, 234, 0.4))
+            drop-shadow(0 0 20px rgba(52, 211, 153, 0.4))
             drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1))
             hue-rotate(0deg);
         transform: scale(1);
     }
     50% {
         filter: 
-            drop-shadow(0 0 40px rgba(240, 147, 251, 0.6))
+            drop-shadow(0 0 40px rgba(110, 231, 183, 0.6))
             drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15))
             hue-rotate(90deg);
         transform: scale(1.02);
     }
     100% {
         filter: 
-            drop-shadow(0 0 35px rgba(245, 87, 108, 0.5))
+            drop-shadow(0 0 35px rgba(34, 197, 94, 0.5))
             drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1))
             hue-rotate(180deg);
         transform: scale(1);
@@ -330,24 +330,24 @@ h1::after {
     background: var(--secondary-gradient);
     border-radius: 3px;
     animation: underlineGlow 1s ease-out 0.8s both;
-    box-shadow: 0 0 20px rgba(240, 147, 251, 0.6);
+    box-shadow: 0 0 20px rgba(110, 231, 183, 0.6);
 }
 
 @keyframes underlineGlow {
     0% {
         width: 0;
         opacity: 0;
-        box-shadow: 0 0 5px rgba(240, 147, 251, 0.3);
+        box-shadow: 0 0 5px rgba(110, 231, 183, 0.3);
     }
     50% {
         width: 140px;
         opacity: 1;
-        box-shadow: 0 0 30px rgba(240, 147, 251, 0.8);
+        box-shadow: 0 0 30px rgba(110, 231, 183, 0.8);
     }
     100% {
         width: 120px;
         opacity: 1;
-        box-shadow: 0 0 20px rgba(240, 147, 251, 0.6);
+        box-shadow: 0 0 20px rgba(110, 231, 183, 0.6);
     }
 }
 
@@ -447,13 +447,13 @@ textarea::before {
 
 textarea:focus {
     outline: none;
-    border-color: rgba(102, 126, 234, 0.6);
+    border-color: rgba(52, 211, 153, 0.6);
     background: rgba(255, 255, 255, 1);
     box-shadow: 
-        0 0 0 4px rgba(102, 126, 234, 0.2),
-        0 25px 60px rgba(102, 126, 234, 0.25),
+        0 0 0 4px rgba(52, 211, 153, 0.2),
+        0 25px 60px rgba(52, 211, 153, 0.25),
         0 0 0 1px rgba(255, 255, 255, 0.9) inset,
-        0 0 40px rgba(240, 147, 251, 0.15);
+        0 0 40px rgba(110, 231, 183, 0.15);
     transform: translateY(-5px) scale(1.02);
 }
 
@@ -581,33 +581,33 @@ button {
     text-transform: uppercase;
     letter-spacing: 3px;
     box-shadow: 
-        0 25px 55px rgba(102, 126, 234, 0.5),
+        0 25px 55px rgba(52, 211, 153, 0.5),
         0 0 0 2px rgba(255, 255, 255, 0.25) inset,
-        0 0 40px rgba(240, 147, 251, 0.4),
-        0 0 15px rgba(139, 92, 246, 0.3);
+        0 0 40px rgba(110, 231, 183, 0.4),
+        0 0 15px rgba(34, 197, 94, 0.3);
     min-width: 220px;
     position: relative;
     overflow: hidden;
     animation: quantumButtonSpawn 1.5s cubic-bezier(0.34, 1.56, 0.64, 1) 1s both;
     transform-style: preserve-3d;
-    filter: drop-shadow(0 8px 20px rgba(102, 126, 234, 0.4));
+    filter: drop-shadow(0 8px 20px rgba(52, 211, 153, 0.4));
 }
 
 @keyframes quantumButtonSpawn {
     0% {
         opacity: 0;
         transform: translateY(60px) scale(0.6) rotateX(25deg) rotateZ(-15deg);
-        filter: blur(12px) drop-shadow(0 8px 20px rgba(102, 126, 234, 0.4));
+        filter: blur(12px) drop-shadow(0 8px 20px rgba(52, 211, 153, 0.4));
     }
     50% {
         opacity: 0.8;
         transform: translateY(-12px) scale(1.12) rotateX(-8deg) rotateZ(5deg);
-        filter: blur(3px) drop-shadow(0 15px 35px rgba(102, 126, 234, 0.6));
+        filter: blur(3px) drop-shadow(0 15px 35px rgba(52, 211, 153, 0.6));
     }
     80% {
         opacity: 0.95;
         transform: translateY(3px) scale(0.98) rotateX(2deg) rotateZ(-1deg);
-        filter: blur(1px) drop-shadow(0 10px 25px rgba(102, 126, 234, 0.5));
+        filter: blur(1px) drop-shadow(0 10px 25px rgba(52, 211, 153, 0.5));
     }
     100% {
         opacity: 1;
