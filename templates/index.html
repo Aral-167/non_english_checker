@@ -1,31 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Non-English Character Checker</title>
+    <title>Non-English Character Checker | Advanced Text Analysis</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detect and highlight non-English characters in your text with our advanced character checker tool.">
+    <meta name="keywords" content="text checker, character analysis, non-english detector">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
     <div class="container">
-        <h1>📝 Non-English Character Checker</h1>
-        <form method="post">
-            <div class="form-group">
-                <textarea name="text" placeholder="Enter your sentence or paragraph here... (Ctrl+Enter to submit quickly)">{{ text }}</textarea>
-            </div>
-            <div class="btn-container">
-                <button type="submit">Check Text</button>
-            </div>
-        </form>
+        <header>
+            <h1>📝 Non-English Character Checker</h1>
+            <p class="subtitle">Detect and highlight non-English characters in your text instantly</p>
+        </header>
         
-        <div class="message">{{ message }}</div>
-        
-        {% if highlighted_text %}
-        <div class="results-section">
-            <h3>📍 Text with highlighted non-English characters:</h3>
-            <div class="highlighted-text">{{ highlighted_text|safe }}</div>
-        </div>
-        {% endif %}
+        <main>
+            <form method="post" class="checker-form">
+                <div class="form-group">
+                    <label for="text-input" class="sr-only">Enter your text</label>
+                    <textarea 
+                        id="text-input"
+                        name="text" 
+                        placeholder="✨ Enter your sentence or paragraph here... (Ctrl+Enter to submit quickly)"
+                        aria-describedby="char-counter preview-message">{{ text }}</textarea>
+                </div>
+                <div class="btn-container">
+                    <button type="submit" aria-describedby="button-help">
+                        <span class="button-text">Analyze Text</span>
+                    </button>
+                    <small id="button-help" class="help-text">Tip: Press Ctrl+Enter for quick analysis</small>
+                </div>
+            </form>
+            
+            <div class="message" role="alert" aria-live="polite">{{ message }}</div>
+            
+            {% if highlighted_text %}
+            <section class="results-section" aria-labelledby="results-heading">
+                <h3 id="results-heading">📍 Analysis Results</h3>
+                <div class="highlighted-text" role="region" aria-label="Text with highlighted non-English characters">{{ highlighted_text|safe }}</div>
+            </section>
+            {% endif %}
+        </main>
     </div>
     
     <footer class="footer">
